@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .right-header-icon {
+    @apply h-9 space-x-5 bg-zinc-500 text-zinc-300 rounded-full hover:bg-zinc-400
+		 w-9 cursor-pointer p-2 flex items-center justify-center;
+  }
+}
+
+.online {
+  position: relative;
+}
+
+.online::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #31a24c;
+  border-radius: 50%;
+  top: 25px;
+  left: 30px;
+  border: 1px solid #000;
+}
+
+.more_menu {
+  overflow: hidden;
+  max-height: 0px;
+  top: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.display_more_menu {
+  max-height: 155px;
+  top: -155px;
+}
